@@ -1,4 +1,4 @@
-package com.faisal.exercise.rezdy.exercise;
+package com.faisal.exercise.rezdy;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

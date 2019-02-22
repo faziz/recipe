@@ -1,4 +1,4 @@
-package com.faisal.exercise.rezdy.exercise;
+package com.faisal.exercise.rezdy;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
