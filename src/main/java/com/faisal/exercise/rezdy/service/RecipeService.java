@@ -7,6 +7,7 @@ import com.faisal.exercise.rezdy.repository.RecipeRepository;
 import static com.google.common.collect.Sets.*;
 import java.io.IOException;
 import java.time.LocalDate;
+import static java.time.LocalDate.now;
 import java.util.Set;
 import java.util.TreeSet;
 import java.util.function.Predicate;
@@ -23,9 +24,11 @@ public class RecipeService {
     public Recipes getRecipes() throws IOException {
 
         Recipes recipes = recipeRepository.getRecipes();
-        LocalDate now = LocalDate.now();
+        LocalDate now = now();
 
+        //Predicate for all expired ingredients.
         Predicate<Ingredient> expired    = i -> now.isAfter(i.getUseBy());
+        //Predicate for all best-before ingredients.
         Predicate<Ingredient> bestBefore = i -> now.isAfter(i.getBestBefore()) && now.isBefore(i.getUseBy());
 
         //From the source ingrediants, separate the expired and best-before ingrediants.

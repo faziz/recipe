@@ -1,7 +1,10 @@
 package com.faisal.exercise.rezdy.service;
 
+import com.faisal.exercise.rezdy.model.Recipe;
 import com.faisal.exercise.rezdy.model.Recipes;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Set;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -29,8 +32,17 @@ public class RecipeServiceTest {
 
     @Test
     public void testGetRecipes() throws IOException {
-        Recipes recipes = recipeService.getRecipes();
-        assertNotNull(recipes);
-        assertFalse(recipes.getRecipes().isEmpty());
+        Recipes r = recipeService.getRecipes();
+        assertNotNull(r);
+
+        Set<Recipe> recipes = r.getRecipes();
+        assertFalse(recipes.isEmpty());
+        assertTrue(recipes.size() == 2);
+
+        Recipe topRecipe = new ArrayList<>(recipes).get(0);
+        assertEquals("Ham and Cheese Toastie", topRecipe.getTitle());
+
+        Recipe bottomRecipe = new ArrayList<>(recipes).get(1);
+        assertEquals("Hotdog", bottomRecipe.getTitle());
     }
 }
