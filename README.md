@@ -1,11 +1,13 @@
 # Recipe Exercise
 This exercise is to showcase Spring Boot enabled, dockerized application.
+
 # Code Structure
 Standard Spring MVC based class packaging
   - controller - contains RecipeController with single request handler to provide list of recipes.
   - model - contains model classes for the API, model classes strictly follow the structure of ingredients.json and recipes.json, the reason being I wanted to make use of Jackson libray to load Json data into POJOs.
   - repostiory - contains a single reposiotry class RecipeRepository, modeled to interact with backing data store, only over data comes from Json files.
   - service - contains a single service RecipeService, to provide recipes to the client.
+  - com.faisal.exercise.rezdy.RezdyApplicationLauncher is used for the entry point of the application.
 
 There are tests under src/test directory for controller, repository and service.
 
@@ -30,10 +32,18 @@ com.faisal.exercise.rezdy.service.RecipeService#getRecipes then figures out,
 
 This project is based on Apache Maven.
 
-To run the application in a docker container, please run the following command.
+To run the application in a docker container, please run the following commands.
 
 ```sh
 $ mvn clean package docker:build
 $ docker run -it -p 8080:8080 faziz/recipe
 ```
+
+To run the application stand alone use following commands.
+
+```sh
+$ mvn clean package
+$ java -jar target/recipe-0.0.1-SNAPSHOT.jar
+```
+
 Goto the browser and type http://localhost:8080/lunch to access the application.
