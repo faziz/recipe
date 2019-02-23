@@ -12,6 +12,14 @@ public class Recipe implements Comparable<Recipe>{
     @JsonIgnore
     private Integer relevance = -1;
 
+    public Recipe() {
+    }
+
+    public Recipe(String title, Set<String> ingredients) {
+        this.title = title;
+        this.ingredients = ingredients;
+    }
+
     public String getTitle() {
         return title;
     }

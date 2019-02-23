@@ -2,6 +2,7 @@ package com.faisal.exercise.rezdy.model;
 
 import java.util.Objects;
 import java.util.Set;
+import java.util.TreeSet;
 
 public class Recipes {
 
@@ -15,6 +16,9 @@ public class Recipes {
     }
 
     public Set<Recipe> getRecipes() {
+        if (null == recipes) {
+            recipes = new TreeSet<>();
+        }
         return recipes;
     }
 
