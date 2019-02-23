@@ -33,7 +33,7 @@ This project is based on Apache Maven.
 To run the application in a docker container, please run the following command.
 
 ```sh
-$ clean package docker:build
+$ mvn clean package docker:build
 $ docker run -it -p 8080:8080 faziz/recipe
 ```
 Goto the browser and type http://localhost:8080/lunch to access the application.
