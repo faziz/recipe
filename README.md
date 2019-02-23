@@ -30,7 +30,7 @@ com.faisal.exercise.rezdy.service.RecipeService#getRecipes then figures out,
 
 This project is based on Apache Maven.
 
-To run the application as a docker container, please run the following command.
+To run the application in a docker container, please run the following command.
 
 ```sh
 $ clean package docker:build
