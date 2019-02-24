@@ -3,7 +3,7 @@ package com.faisal.exercise.rezdy.service;
 import com.faisal.exercise.rezdy.model.Ingredient;
 import com.faisal.exercise.rezdy.model.Recipe;
 import com.faisal.exercise.rezdy.model.Recipes;
-import com.faisal.exercise.rezdy.repository.RecipeRepository;
+import com.faisal.exercise.rezdy.repository.LunchRecipeRepository;
 import static com.google.common.collect.Sets.*;
 import java.io.IOException;
 import java.time.LocalDate;
@@ -16,10 +16,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-public class RecipeService {
+public class LunchRecipeService {
     
     @Autowired
-    private RecipeRepository recipeRepository;
+    private LunchRecipeRepository recipeRepository;
 
     public Recipes getRecipes() throws IOException {
 

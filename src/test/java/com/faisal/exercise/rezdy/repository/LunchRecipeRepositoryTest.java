@@ -11,10 +11,10 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class RecipeRepositoryTest {
+public class LunchRecipeRepositoryTest {
     
     @Autowired
-    private RecipeRepository recipeRepository;
+    private LunchRecipeRepository recipeRepository;
     
     @Test
     public void testGetRecipes() throws Exception {

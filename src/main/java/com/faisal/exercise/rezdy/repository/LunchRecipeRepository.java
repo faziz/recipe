@@ -10,7 +10,7 @@ import org.springframework.core.io.Resource;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public class RecipeRepository {
+public class LunchRecipeRepository {
 
     @Value("classpath:ingredients.json")
     private Resource ingredientSource;

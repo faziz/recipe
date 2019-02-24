@@ -2,7 +2,7 @@ package com.faisal.exercise.rezdy.controller;
 
 import com.faisal.exercise.rezdy.model.Recipe;
 import com.faisal.exercise.rezdy.model.Recipes;
-import com.faisal.exercise.rezdy.service.RecipeService;
+import com.faisal.exercise.rezdy.service.LunchRecipeService;
 import java.io.IOException;
 import java.util.HashSet;
 import java.util.Set;
@@ -22,11 +22,11 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
 @RunWith(SpringRunner.class)
-@WebMvcTest(RecipeController.class)
-public class RecipeControllerTest {
+@WebMvcTest(LunchController.class)
+public class LunchControllerTest {
     
     @MockBean
-    private RecipeService recipeService;
+    private LunchRecipeService recipeService;
     @Autowired
     private MockMvc mvc;
 
